@@ -1,6 +1,6 @@
 package ua.nure.parser.reader;
 
-import ua.nure.parser.TypeReader;
+import ua.nure.parser.model.TypeReader;
 
 import java.util.Optional;
 

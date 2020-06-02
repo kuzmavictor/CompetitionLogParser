@@ -1,4 +1,4 @@
-package ua.nure.parser.reader;
+package ua.nure.parser.model.tiny;
 
 import jdk.nashorn.internal.ir.annotations.Immutable;
 import ua.nure.parser.Query;

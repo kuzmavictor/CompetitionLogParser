@@ -1,6 +1,7 @@
 package ua.nure.parser.reader;
 
-import ua.nure.parser.LogData;
+import ua.nure.parser.model.LogData;
+import ua.nure.parser.model.tiny.ReaderQuery;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -20,7 +22,7 @@ public final class ResourceReader implements Reader<LogData, ReaderQuery> {
     private static final String ERROR_MESSAGE = "The process of reading the log file was failed.";
 
     @Override
-    public Iterable<LogData> fetchLogData(ReaderQuery query) throws ReaderOperationException {
+    public Collection<LogData> fetchLogData(ReaderQuery query) throws ReaderOperationException {
         //TODO:2020-06-01:kuzma.victor: Add better implementation.
         String path = query.getFilePath();
         Stream<String> stream = null;
