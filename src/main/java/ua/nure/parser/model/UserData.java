@@ -68,8 +68,8 @@ public final class UserData implements Result {
         sb.append(" endDate :");
         sb.append(endDate.getFormatedDate());
         sb.append(" spentTime: ");
-        sb.append(spentTime.getPeriod().getSeconds());
-        sb.append(" seconds; ");
+        sb.append(spentTime.getPeriod().toMillis());
+        sb.append(" milliseconds; ");
         return sb.toString();
     }
 
